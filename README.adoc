@@ -135,7 +135,8 @@ _Temps estimé : 20 mins_
 
 * Implémenter (en junit) des TU portant sur la règle de gestion qui consiste à afficher `[LATE!]` dans la description d'un item en retard de plus de 24h.
 
-*Quels types de tests devra-t-on écrire pour les adaptateurs ?* 
+*Quels types de tests devra-t-on écrire pour les adaptateurs ?*
+Les tests les plus pertinents pour les adapteurs sont les test d'intégration. Un test d'intégration contrairement au test unitaire va s'assurer de la communication entre les différentes parties du système. Les tests unitaires eux vont se focaliser sur une méthode précise.
 
 *S'il vous reste du temps, écrire quelques-uns de ces types de test.*
 
