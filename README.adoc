@@ -3,7 +3,7 @@
 ## Nom du(des) étudiant(e)(s) de ce monôme/binôme 
 WARNING: NE PAS OUBLIER DE MENTIONNER LES DEUX NOMS SI VOUS ETES EN BINOME!
 
-#XXX# (et #YYY#)
+#Bastien PAVION# et #Marion THUAUD#
 
 Commentaires éventuels des étudiants : #XXXXXX#
 
@@ -53,9 +53,16 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés : le dépot Github de l'ense
 
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
 
+Ce code semble structuré en couches très basiques, ce qui ne correspond pas à une architecture en couches à proprement parler.
+
+
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
 
+Le code métier se trouve dans le controller de la ToDoList.
+
 *Cette règle est-elle facilement testable par un test unitaire ?*
+
+Cette règle peut être testable mais dans le contexte actuel ce n'est pas super simple. Spring rend la tâche plus complexe que du Java natif. Les tests devront être crées à l'extérieur du controller pour la maintenabilité du code.
 
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
@@ -63,9 +70,13 @@ docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
 *Expliquer cette ligne de commande (y compris les options utilisées)*
 
+Ici la commande permet de lancer une nouvelle instance de conteneur, en l'occurence un conteneur Docker. La mention du "-it" permet de lancer ce conteneur en mode interactif. Le "-e" permet de renseigner une variable d'environnement, dans ce cas le mot de passe Postgresql. Le "-p" permet de rensigner le numéro de port de lancement.
+
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
+`todoItemRepository` est `null` car il n'a pas été injecté. La meilleure méthode pour l'injecter et de rajouter la mention @Inject au dessus du constructeur.
+
 
 * Modifier le code en conséquence.
 
