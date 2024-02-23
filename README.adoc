@@ -119,6 +119,8 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
 
 *Rappeler en quelques lignes les grands principes de l'architecture hexagonale.*
 
+L'architecture hexagonale, également appelée "Ports and adapters", est un modèle de conception qui se base sur le principe de l'isolation. Chaque aspect spécifique de l'application est séparé dans une couche claire qui n'a pas de responsabilité transverse. Les interactions avec l'extérieur sont abstraites sous forme de ports et les implémentations concrètes sont des adapteurs. Cette architecture facilite le test unitaire par son indépendance. Les dépendances sont inversés de telle sorte que les composants métier ne dépendent pas des détails de l'implémentation mais des abstractions.
+
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
 
 * prend un `TodoItem` au format JSON dans le body (voir exemple de contenu plus haut);
